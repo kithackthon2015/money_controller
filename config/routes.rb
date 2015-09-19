@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'post/update'
 
-  get 'home/index'
+  get 'home/index/:id' => "home#index"
 
   get 'home/show'
 

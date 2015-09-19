@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150919130721) do
 
-  create_table "titles", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.date     "sale_data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: :cascade do |t|
     t.integer  "UserID",     limit: 4
     t.integer  "target",     limit: 4
