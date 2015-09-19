@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'payment/create'
+
   get 'ranking/index'
 
   get 'post/update'
