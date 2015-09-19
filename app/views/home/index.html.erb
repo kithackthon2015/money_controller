@@ -1,2 +1,49 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>サンプル</title>
+      <script src=<%=javascript_path "Chart.min"%>></script>
+
+  </head>
+  <body>
+      <div class="nav">
+        <ul class="nl clearFix">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">Money</a></li>
+          <li><a href="#">MyGraph</a></li>
+          <li><a href="#">Rankings</a></li>
+        </ul>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <div id="style" class="relative">
+        <img  class="" src="/assets/images.jpg"width="350"height="100">
+        <img  class="absolute" src="/assets/images.png"width="50"height="50" align="left">
+        <p class="abs">ユーザ名</p>
+      </div>
+<div id="style">
+<p><span class="big">09月</span>の利用状況</p>
+<br>
+<br>
+<font>■残金はこちら■</font>
+<h2>1,000,000,000,000,000</h2>
+<br>
+<font>■目標金額はこちら■</font>
+<h2>1,000,000,000,000</h2>
+</div>
+<div id="style">
+<font>■支出グラフ■</font>
+<br>
+<br>
+<br>
+<body onload="displayLineChart();">
+  <div class="box">
+    <canvas id="lineChart" height="450" width="350"></canvas>
+  </div>
+</div>
+  </body>
+</html>
