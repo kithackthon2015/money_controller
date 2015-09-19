@@ -46,3 +46,68 @@ scaleShowGridLines : false,
      };
     var lineChart = new Chart(ctx).Line(data, options);
   }
+
+
+
+$(function(){
+  var pieData = [
+      {
+          label:"食費",
+          value: 30,
+          color:"#862153"
+      },
+      {
+          label:"交通費",
+          value: 20,
+          color:"#F38630"
+      },
+      {
+          label:"ローン",
+          value : 20,
+          color : "#E0E4CC"
+      },
+      {
+        　label:"娯楽",
+          value : 20,
+          color : "#ab58e0"
+      },
+      {
+          label:"エンジェル",
+          value : 10,
+          color : "#69D2E7"
+      }
+  ];
+  // オプション
+  var options = {
+    showTooltips : "ture",
+      // 値を区切る線の表示
+      segmentShowStroke : true,
+      // 値を区切る線の色
+      segmentStrokeColor : "#fff",
+      // 値を区切る線の幅
+      segmentStrokeWidth : 5,
+      // 表示の時のアニメーション
+      animation : true,
+      // アニメーションの速度 ( ステップ数 )
+      animationSteps : 60,
+      // アニメーションの種類, 以下が用意されている
+      // linear, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic,
+      // easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint,
+      // easeOutQuint, easeInOutQuint, easeInSine, easeOutSine, easeInOutSine,
+      // easeInExpo, easeOutExpo, easeInOutExpo, easeInCirc, easeOutCirc, easeInOutCirc,
+      // easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack,
+      // easeInOutBack, easeInBounce, easeOutBounce, easeInOutBounce
+      animationEasing : "easeOutQuad",
+      // 回転で表示するアニメーションの有無
+      animateRotate : true,
+      // 中央から拡大しながら表示するアニメーションの有無
+      animateScale : true,
+      // アニメーション終了後に実行する処理
+      // animation: false の時にも実行されるようです
+      // e.g. onAnimationComplete : function() {alert('complete');}
+      onAnimationComplete : null,
+      legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\">&nbsp;&nbsp;&nbsp;</span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+
+  }
+  var chart = new Chart(document.getElementById("canvas").getContext("2d")).Pie(pieData, options);
+});
