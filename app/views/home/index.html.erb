@@ -23,17 +23,17 @@
       <div id="style" class="relative">
         <img  class="" src="/assets/images.jpg"width="350"height="100">
         <img  class="absolute" src="/assets/images.png"width="50"height="50" align="left">
-        <p class="abs">ユーザ名</p>
+        <p class="abs">ユーザ名 <%= @user.name %></p>
       </div>
 <div id="style">
 <p><span class="big">09月</span>の利用状況</p>
 <br>
 <br>
 <font>■残金はこちら■</font>
-<h2>1,000,000,000,000,000</h2>
+<h2><%= number_with_delimiter(@money.money) %></h2>
 <br>
 <font>■目標金額はこちら■</font>
-<h2>1,000,000,000,000</h2>
+<h2><%= number_with_delimiter(@user.target) %></h2>
 </div>
 <div id="style">
 <font>■支出グラフ■</font>
