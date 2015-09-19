@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ranking/index'
+
   get 'post/update'
 
   get 'home/index'
