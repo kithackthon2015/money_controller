@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.boolean :sex
       t.integer :salary
+      t.string :picture
       t.timestamps
     end
   end
