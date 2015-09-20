@@ -10,10 +10,9 @@
   <body>
       <div class="nav">
         <ul class="nl clearFix">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">Money</a></li>
-          <li><a href="#">MyGraph</a></li>
-          <li><a href="#">Rankings</a></li>
+          <li><a href="http://133.242.235.164/home/index">HOME</a></li>
+          <li><a href="http://133.242.235.164/home/show">Money</a></li>
+          <li><a href="http://133.242.235.164/ranking/index">Rankings</a></li>
         </ul>
       </div>
 
@@ -22,7 +21,6 @@
       <br>
       <div id="style" class="relative">
         <img  class="" src="/assets/images.jpg"width="350"height="100">
-
         <!-- <img  class="absolute" src="/assets/images.png"width="50"height="50" align="left"> -->
         <%= image_tag "#{@user.picture}", :size => '50x50' ,:class => "absolute", :align => "left" %>
         <p class="abs">ユーザ名 <%= @user.name %></p>
