@@ -1,2 +1,56 @@
-<h1>Ranking#index</h1>
-<p>Find me in app/views/ranking/index.html.erb</p>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+	</head>
+<%
+	per_money1=[["千円",1000],["山下",200000],["依田",4],["寺田",99999999999],["平田",100000]]
+	per_money_sort = per_money1.sort{|p,q|p[1]<=>q[1]}
+%>
+
+<body>
+		<div class="nav">
+			<ul class="nl clearFix">
+				<li><a href="http://133.242.235.164/home/index">HOME</a></li>
+				<li><a href="http://133.242.235.164/home/show">Money</a></li>
+				<li><a href="http://133.242.235.164/ranking/index">Rankings</a></li>
+			</ul>
+		</div>
+</body>
+<br>
+<br>
+<br>
+
+<h1>■浪費ランキング■</h1>
+<div class="dai">
+<img src="/assets/gatag.jpg"width="350"height="150">
+<a id="itii"><img class="First" src="/assets/human.jpg"  width="100" height="100"></a>
+<a id="nii"><img class="Second" src="/assets/human.jpg" width="100" height="100" ></a>
+<a id="sanni"><img class="Third" src="/assets/human.jpg" width="100" height="100" ></a>
+</div>
+<body>
+
+<div class="table">
+<table  id="Firstpoint" style="display: none;"border="10" cellspacing="10"cellpaddomg="10"bordercolor="daa520">
+	<tr><th>順位</th><th>名前</th><th>金額</th></tr>
+	<tr><td>1位</td><td><%= per_money_sort[4][0]%>さん</td><td align="right"><%= per_money_sort[4][1]%>円</td></tr>
+</table>
+
+<table id="Secondpoint" style="display: none;" border="10" cellspacing="10"cellpaddomg="10"bordercolor="c0c0c0">
+	<tr><th>順位</th><th>名前</th><th>金額</th></tr>
+	<tr><td>2位</td><td><%= per_money_sort[3][0]%>さん</td><td align="right"><%= per_money_sort[3][1]%>円</td></tr>
+</table>
+<table id="Thirdpoint" style="display: none;"border="10"cellspacing="10"cellpaddomg="10"bordercolor="a0522d">
+	<tr><th>順位</th><th>名前</th><th>金額</th></tr>
+	<tr><td>3位</td><td><%= per_money_sort[2][0]%>さん</td><td align="right"><%= per_money_sort[2][1]%>円</td></tr>
+</table>
+</div>
+<img  class="" src="/assets/xf3535097780.jpg"width="350"height="350">
+</body>
+
+
+
+
+
+</html>
