@@ -24,9 +24,8 @@
         <img  class="" src="/assets/images.jpg"width="350"height="100">
         <!-- <img  class="absolute" src="/assets/images.png"width="50"height="50" align="left"> -->
         <%= image_tag "#{@user.picture}", :size => '50x50' ,:class => "absolute", :align => "left" %>
-        <p class="abs">ユーザ名 <%= @user.name %></p>
+        <p class="abs">ユーザ名: <%= @user.name %></p>
       </div>
-      <%= debug @user %>
 <div id="style">
 <p><span class="big">09月</span>の利用状況</p>
 <br>
