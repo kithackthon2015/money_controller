@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150919170413) do
+ActiveRecord::Schema.define(version: 20150919180408) do
 
   create_table "money", force: :cascade do |t|
     t.integer  "money",      limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "pay",        limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
