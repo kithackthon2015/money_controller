@@ -11,9 +11,9 @@
   <body>
   <div class="nav">
     <ul class="nl clearFix">
-      <li><a href="http://133.242.235.164/home/index">HOME</a></li>
-      <li><a href="http://133.242.235.164/home/show">Money</a></li>
-      <li><a href="http://133.242.235.164/ranking/index">Rankings</a></li>
+      <li><%= link_to "Home", home_index_path %></li>
+      <li><%= link_to "Money", home_show_path %></li>
+      <li><%= link_to "Rankings", controller:"ranking", action:"index" %></li>
     </ul>
   </div>
 </body>

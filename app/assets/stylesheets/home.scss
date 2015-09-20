@@ -26,7 +26,7 @@ width: 100%; /* ナビゲーションの幅 */
 background-color: #f9f9f9; /* ナビゲーションの背景色 */
 border-top: 1px #cccccc solid; /* 上境界線 */
 border-bottom: 1px #cccccc solid; /* 下境界線 */
-font-size: 80%;
+font-size: 90%;
 position: fixed;
 }
 /* --- メニューエリア --- */
@@ -42,7 +42,7 @@ text-align: center;
 
 /* --- メニュー項目 --- */
 div.nav ul.nl li {
-width: 25%; /* 項目の幅 */
+width: 33%; /* 項目の幅 */
 float: left;
 }
 
@@ -76,14 +76,14 @@ h2{
 .big{
   font-size: 40px;
 }
-#style{
+#sty{
   background-color: #fff;
   border-style: none;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   margin-bottom: 15px;
 }
-
+​
 /* --- clearfix --- */
 .clearFix:after {
 content: ".";
