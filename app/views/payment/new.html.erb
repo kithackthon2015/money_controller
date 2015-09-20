@@ -1,0 +1,12 @@
+<body>
+	<table>
+		<th>POS入力</th>
+    <tr>
+      <%= form_for @payment,:url => {:action => :create} do |f| %>
+        <td><p><%= f.number_field :pay, placeholder: '引き落とし額', required: true%></p></td>
+        <%= f.hidden_field :user_id, :value => params[:id] %>
+    </tr>
+	</table>
+ <%= f.submit '引き落とし額を送信' %>
+ <% end %>
+</body>
