@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   get 'payment/create'
 
-  get 'ranking/index'
+  get 'ranking/index/:id' => "ranking#index"
 
   get 'post/update'
 
-  get 'home/index/:id' => "home#index"
+  get 'home/index/:id' => "home#index" , as: 'home_index'
 
-  get 'home/show'
+  get 'home/show/:id' => "home#show" , as: 'home_show'
 
   post 'payment/create'
 
